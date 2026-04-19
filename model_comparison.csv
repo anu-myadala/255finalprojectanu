@@ -1,0 +1,6 @@
+model,r2,adj_r2,rmse,mae,equation,r2_log_space,r2_raw_space,rmse_raw_min,mae_raw_min,skewness_before_log,skewness_after_log,pseudo_r2_mcfadden,mean_count,dispersion,accuracy,precision,recall,f1,auc
+Simple Linear (fare~distance),0.6337,0.6337,3.3636,2.1421,fare = 5.265 + 4.172 * distance,,,,,,,,,,,,,,
+Multi-Variable Linear (fare),0.8668,0.8667,2.0288,0.8051,,,,,,,,,,,,,,,
+Log-Linear (log duration),,,,,,0.499,0.3923,5.0401,3.2918,2.4454,-0.3791,,,,,,,,
+Poisson (hourly trip counts),,,202.6698,106.056,,,,,,,,0.5508,116.0492,460.7423,,,,,
+Logistic (P(tip>0)),,,,,,,,,,,,,,,0.9477,0.9541,0.9787,0.9662,0.9324

@@ -1,0 +1,6 @@
+antecedent,consequent,support,confidence,lift,count
+PU=Queens,DO=Queens,0.0098,0.832,49.55,3790
+PU=Brooklyn,DO=Brooklyn,0.0055,0.735,45.75,2121
+PU=Manhattan,DO=Manhattan,0.956,0.98,1.02,370921
+PU=Manhattan,DO=Brooklyn,0.0102,0.01,0.65,3971
+PU=Manhattan,DO=Queens,0.0066,0.007,0.4,2543

@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+yellow_tripdata_2024-01.csv
+yellow_tripdata_2024-01.parquet

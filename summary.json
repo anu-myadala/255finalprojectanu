@@ -1,0 +1,181 @@
+{
+  "rows_raw": 2964624,
+  "rows_clean": 387998,
+  "sample_n": 387998,
+  "regression_results": {
+    "Simple Linear (fare~distance)": {
+      "r2": 0.6337243150874234,
+      "adj_r2": 0.6337195949182837,
+      "rmse": 3.3635957557556018,
+      "mae": 2.142060323139108,
+      "equation": "fare = 5.265 + 4.172 * distance"
+    },
+    "Multi-Variable Linear (fare)": {
+      "r2": 0.8667527501162557,
+      "adj_r2": 0.8667390116929969,
+      "rmse": 2.0287516142380624,
+      "mae": 0.8051301860413717
+    },
+    "Log-Linear (log duration)": {
+      "r2_log_space": 0.4989587634786894,
+      "r2_raw_space": 0.3922796947217031,
+      "rmse_raw_min": 5.040067562207727,
+      "mae_raw_min": 3.291773348924066,
+      "skewness_before_log": 2.445414004136464,
+      "skewness_after_log": -0.3791335208980686
+    },
+    "Poisson (hourly trip counts)": {
+      "pseudo_r2_mcfadden": 0.5507712605911554,
+      "rmse": 202.6697913784173,
+      "mae": 106.05603208326595,
+      "mean_count": 116.04916158536585,
+      "dispersion": 460.7423462813661
+    },
+    "Logistic (P(tip>0))": {
+      "accuracy": 0.9476939730158116,
+      "precision": 0.9541326589263134,
+      "recall": 0.9786746622645959,
+      "f1": 0.9662478483938831,
+      "auc": 0.9323833798839268
+    }
+  },
+  "decision_tree": {
+    "accuracy": 0.5845103092783506,
+    "precision": 0.39198758366475894,
+    "recall": 0.6927230650552841,
+    "f1": 0.5006659439368127,
+    "auc": 0.6454801248219335
+  },
+  "kmeans": {
+    "k": 6,
+    "silhouette": 0.21750106253220206,
+    "profiles": [
+      {
+        "cluster": 0,
+        "label": "Low-Volume Periphery",
+        "size": 18
+      },
+      {
+        "cluster": 1,
+        "label": "Airport Feeder",
+        "size": 14
+      },
+      {
+        "cluster": 2,
+        "label": "Nightlife / Evening",
+        "size": 12
+      },
+      {
+        "cluster": 3,
+        "label": "Dense High-Volume Core",
+        "size": 15
+      },
+      {
+        "cluster": 4,
+        "label": "Morning Commute",
+        "size": 21
+      },
+      {
+        "cluster": 5,
+        "label": "Long-Haul Premium",
+        "size": 20
+      }
+    ]
+  },
+  "dbscan": {
+    "clusters": 2,
+    "outliers": 11
+  },
+  "apriori_top3": [
+    {
+      "antecedent": "PU=Queens",
+      "consequent": "DO=Queens",
+      "support": 0.0098,
+      "confidence": 0.832,
+      "lift": 49.55,
+      "count": 3790
+    },
+    {
+      "antecedent": "PU=Brooklyn",
+      "consequent": "DO=Brooklyn",
+      "support": 0.0055,
+      "confidence": 0.735,
+      "lift": 45.75,
+      "count": 2121
+    },
+    {
+      "antecedent": "PU=Manhattan",
+      "consequent": "DO=Manhattan",
+      "support": 0.956,
+      "confidence": 0.98,
+      "lift": 1.02,
+      "count": 370921
+    }
+  ],
+  "pca_components_for_90pct": 5,
+  "lift_metrics": {
+    "top10_capture_pct": 12.7,
+    "top10_lift": 1.271,
+    "top20_capture_pct": 25.4,
+    "top20_lift": 1.269,
+    "top30_capture_pct": 38.0,
+    "top30_lift": 1.266
+  },
+  "dbscan_outlier_zones": [
+    {
+      "Zone": "JFK Airport",
+      "Borough": "Queens",
+      "trips": 1284,
+      "avg_fare": 15.764727414330219,
+      "airport_share": 1.0
+    },
+    {
+      "Zone": "Alphabet City",
+      "Borough": "Manhattan",
+      "trips": 973,
+      "avg_fare": 14.008119218910586,
+      "airport_share": 0.0
+    },
+    {
+      "Zone": "LaGuardia Airport",
+      "Borough": "Queens",
+      "trips": 791,
+      "avg_fare": 15.791782553729455,
+      "airport_share": 1.0
+    },
+    {
+      "Zone": "Bedford",
+      "Borough": "Brooklyn",
+      "trips": 88,
+      "avg_fare": 19.083181818181817,
+      "airport_share": 0.0
+    },
+    {
+      "Zone": "Elmhurst",
+      "Borough": "Queens",
+      "trips": 75,
+      "avg_fare": 15.510533333333333,
+      "airport_share": 0.0
+    }
+  ],
+  "dt_feature_importance": {
+    "trip_distance": 0.12662720953176806,
+    "duration_min": 0.15900820024820256,
+    "fare_amount": 0.1185528534766317,
+    "passenger_count": 0.06656177845722908,
+    "is_weekend": 0.04820033380605339,
+    "is_airport_pickup": 0.005054862564537978,
+    "is_airport_dropoff": 0.0022273515061761373,
+    "speed_mph": 0.4737674104094011
+  },
+  "kmeans_elbow": {
+    "2": 476.07890490461523,
+    "3": 401.0461396700889,
+    "4": 296.1125314593145,
+    "5": 254.11067404141534,
+    "6": 275.45781339275646,
+    "7": 218.4497650366421,
+    "8": 264.7950014602583,
+    "9": 121.34648562137461
+  }
+}

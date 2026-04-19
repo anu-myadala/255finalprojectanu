@@ -1,0 +1,15 @@
+step,rows
+0. raw,2964624
+1. drop rows with core NULLs,2964624
+2. fare_amount >= 0,2927176
+3. total_amount >= 0,2927056
+4. tip_amount >= 0,2927056
+5. trip_distance >= 0,2927056
+6. trip_distance <= 100 mi,2927000
+7. pickup < dropoff,2926134
+8. pickup within Jan 2024,2926117
+9. 1 min <= duration <= 6 hr,2895273
+10. 1 <= passengers <= 6,2864634
+"11. IQR clip fare_amount [0.00, 38.35]",2580617
+"11. IQR clip trip_distance [0.00, 4.86]",2391813
+"12. stratified sample (n=400,000 by hour)",387998

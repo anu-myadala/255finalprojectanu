@@ -1,0 +1,7 @@
+cluster,trips,avg_fare,avg_distance,avg_duration,morning_ratio,evening_ratio,airport_share,size,label
+0,5619.22,12.24,1.72,10.64,0.33,0.23,0.0,18,Low-Volume Periphery
+1,569.29,16.1,2.48,13.33,0.2,0.29,0.14,14,Airport Feeder
+2,5880.75,13.29,1.89,11.58,0.11,0.21,0.0,12,Nightlife / Evening
+3,13200.67,12.12,1.64,10.96,0.26,0.3,0.0,15,Dense High-Volume Core
+4,314.67,14.65,1.83,12.46,0.38,0.12,0.0,21,Morning Commute
+5,93.7,18.87,2.12,17.81,0.32,0.07,0.0,20,Long-Haul Premium

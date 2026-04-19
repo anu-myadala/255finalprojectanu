@@ -1,0 +1,9 @@
+Zone,Borough,trips,avg_fare,airport_share
+JFK Airport,Queens,1284,15.764727414330219,1.0
+Alphabet City,Manhattan,973,14.008119218910586,0.0
+LaGuardia Airport,Queens,791,15.791782553729455,1.0
+Bedford,Brooklyn,88,19.083181818181817,0.0
+Elmhurst,Queens,75,15.510533333333333,0.0
+Flatlands,Brooklyn,62,20.364354838709676,0.0
+DUMBO/Vinegar Hill,Brooklyn,60,17.552500000000002,0.0
+Clinton Hill,Brooklyn,53,19.601509433962267,0.0
