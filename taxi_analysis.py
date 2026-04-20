@@ -41,10 +41,14 @@ CSV_CANDIDATES = [
     os.path.join(SCRIPT_DIR, "yellow_tripdata_2024-01.csv"),
     os.path.expanduser("~/Downloads/yellow_tripdata_2024-01.csv"),
     os.path.expanduser("~/Downloads/mini2-claude/yellow_tripdata_2024-01.csv"),
+    os.path.join(SCRIPT_DIR, "..", "mini2-claude", "yellow_tripdata_2024-01.csv"),
+    "/sessions/charming-magical-turing/mnt/Downloads/mini2-claude/yellow_tripdata_2024-01.csv",
 ]
 ZONES_CANDIDATES = [
     os.path.join(SCRIPT_DIR, "taxi_zone_lookup.csv"),
     os.path.expanduser("~/Downloads/taxi_zone_lookup.csv"),
+    "/sessions/charming-magical-turing/mnt/Downloads/taxi_zone_lookup.csv",
+    "/sessions/charming-magical-turing/mnt/uploads/taxi_zone_lookup.csv",
 ]
 CHART_DIR = os.path.join(SCRIPT_DIR, "charts")
 os.makedirs(CHART_DIR, exist_ok=True)
