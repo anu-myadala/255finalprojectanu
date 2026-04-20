@@ -1,181 +1,203 @@
 {
   "rows_raw": 2964624,
-  "rows_clean": 387998,
-  "sample_n": 387998,
+  "rows_clean": 2797016,
+  "sample_n": 398169,
   "regression_results": {
     "Simple Linear (fare~distance)": {
-      "r2": 0.6337243150874234,
-      "adj_r2": 0.6337195949182837,
-      "rmse": 3.3635957557556018,
-      "mae": 2.142060323139108,
-      "equation": "fare = 5.265 + 4.172 * distance"
+      "r2": 0.8928714880311093,
+      "adj_r2": 0.8928701427363538,
+      "rmse": 4.606715732087722,
+      "mae": 2.666862258425579,
+      "equation": "fare = 6.522 + 3.592 * distance",
+      "cv_r2": "0.8916 \u00b1 0.0015"
     },
     "Multi-Variable Linear (fare)": {
-      "r2": 0.8667527501162557,
-      "adj_r2": 0.8667390116929969,
-      "rmse": 2.0287516142380624,
-      "mae": 0.8051301860413717
+      "r2": 0.9246659086625318,
+      "adj_r2": 0.9246583397742342,
+      "rmse": 3.863088475524312,
+      "mae": 1.6892176983192693,
+      "cv_r2": "0.9238 \u00b1 0.0025"
     },
     "Log-Linear (log duration)": {
-      "r2_log_space": 0.4989587634786894,
-      "r2_raw_space": 0.3922796947217031,
-      "rmse_raw_min": 5.040067562207727,
-      "mae_raw_min": 3.291773348924066,
-      "skewness_before_log": 2.445414004136464,
-      "skewness_after_log": -0.3791335208980686
+      "r2_log_space": 0.46813783402847,
+      "r2_raw_space": 0.26682977233068006,
+      "rmse_raw_min": 9.374006409553317,
+      "mae_raw_min": 5.528650313997136,
+      "skewness_before_log": 3.089617106353154,
+      "skewness_after_log": -0.04754471537273469
     },
     "Poisson (hourly trip counts)": {
-      "pseudo_r2_mcfadden": 0.5507712605911554,
-      "rmse": 202.6697913784173,
-      "mae": 106.05603208326595,
-      "mean_count": 116.04916158536585,
-      "dispersion": 460.7423462813661
+      "pseudo_r2_mcfadden": 0.5887865517276347,
+      "rmse": 164.2935385506448,
+      "mae": 84.60871740585061,
+      "mean_count": 103.02095422308189,
+      "dispersion": 407.3701683209588,
+      "overdispersion_note": "Dispersion ratio = 407.4 (Poisson assumes 1.0). Severe overdispersion \u2014 standard errors are underestimated. A Negative Binomial model would be more appropriate for these highly variable count data."
     },
     "Logistic (P(tip>0))": {
-      "accuracy": 0.9476939730158116,
-      "precision": 0.9541326589263134,
-      "recall": 0.9786746622645959,
-      "f1": 0.9662478483938831,
-      "auc": 0.9323833798839268
+      "accuracy": 0.5698947685661904,
+      "precision": 0.7973925953419319,
+      "recall": 0.5739426625035481,
+      "f1": 0.6674627909008826,
+      "auc": 0.5905913216891961,
+      "cv_auc": "0.5892 \u00b1 0.0027"
     }
   },
   "decision_tree": {
-    "accuracy": 0.5845103092783506,
-    "precision": 0.39198758366475894,
-    "recall": 0.6927230650552841,
-    "f1": 0.5006659439368127,
-    "auc": 0.6454801248219335
+    "accuracy": 0.6080191877841123,
+    "precision": 0.39478251582067236,
+    "recall": 0.6336247535784691,
+    "f1": 0.4864687011598256,
+    "auc": 0.6475821733690126
   },
   "kmeans": {
-    "k": 6,
-    "silhouette": 0.21750106253220206,
+    "k": 4,
+    "silhouette": 0.3647184903235219,
     "profiles": [
       {
         "cluster": 0,
-        "label": "Low-Volume Periphery",
-        "size": 18
+        "label": "Nightlife / Evening",
+        "size": 37
       },
       {
         "cluster": 1,
         "label": "Airport Feeder",
-        "size": 14
+        "size": 2
       },
       {
         "cluster": 2,
-        "label": "Nightlife / Evening",
-        "size": 12
+        "label": "Dense High-Volume Core",
+        "size": 53
       },
       {
         "cluster": 3,
-        "label": "Dense High-Volume Core",
-        "size": 15
-      },
-      {
-        "cluster": 4,
         "label": "Morning Commute",
-        "size": 21
-      },
-      {
-        "cluster": 5,
-        "label": "Long-Haul Premium",
-        "size": 20
+        "size": 42
       }
     ]
   },
   "dbscan": {
-    "clusters": 2,
-    "outliers": 11
+    "clusters": 1,
+    "outliers": 8
   },
   "apriori_top3": [
     {
-      "antecedent": "PU=Queens",
-      "consequent": "DO=Queens",
-      "support": 0.0098,
-      "confidence": 0.832,
-      "lift": 49.55,
-      "count": 3790
+      "antecedent": "DO_bor=Queens, PU_bor=Manhattan",
+      "consequent": "DO=LaGuardia Airport",
+      "support": 0.0134,
+      "confidence": 0.38,
+      "lift": 25.37,
+      "count": 5317
     },
     {
-      "antecedent": "PU=Brooklyn",
-      "consequent": "DO=Brooklyn",
-      "support": 0.0055,
-      "confidence": 0.735,
-      "lift": 45.75,
-      "count": 2121
+      "antecedent": "DO_bor=Manhattan, PU_bor=Queens, rush=yes",
+      "consequent": "PU=LaGuardia Airport",
+      "support": 0.0058,
+      "confidence": 0.463,
+      "lift": 18.25,
+      "count": 2313
     },
     {
-      "antecedent": "PU=Manhattan",
-      "consequent": "DO=Manhattan",
-      "support": 0.956,
-      "confidence": 0.98,
-      "lift": 1.02,
-      "count": 370921
+      "antecedent": "DO_bor=Manhattan, PU_bor=Queens",
+      "consequent": "PU=LaGuardia Airport",
+      "support": 0.0179,
+      "confidence": 0.436,
+      "lift": 17.2,
+      "count": 7116
     }
   ],
-  "pca_components_for_90pct": 5,
+  "pca_components_for_90pct": 4,
   "lift_metrics": {
-    "top10_capture_pct": 12.7,
-    "top10_lift": 1.271,
-    "top20_capture_pct": 25.4,
-    "top20_lift": 1.269,
-    "top30_capture_pct": 38.0,
-    "top30_lift": 1.266
+    "top10_capture_pct": 10.8,
+    "top10_lift": 1.078,
+    "top20_capture_pct": 21.4,
+    "top20_lift": 1.071,
+    "top30_capture_pct": 32.1,
+    "top30_lift": 1.071
   },
   "dbscan_outlier_zones": [
     {
       "Zone": "JFK Airport",
       "Borough": "Queens",
-      "trips": 1284,
-      "avg_fare": 15.764727414330219,
+      "trips": 15509,
+      "avg_fare": 54.68215616738668,
       "airport_share": 1.0
-    },
-    {
-      "Zone": "Alphabet City",
-      "Borough": "Manhattan",
-      "trips": 973,
-      "avg_fare": 14.008119218910586,
-      "airport_share": 0.0
     },
     {
       "Zone": "LaGuardia Airport",
       "Borough": "Queens",
-      "trips": 791,
-      "avg_fare": 15.791782553729455,
+      "trips": 10090,
+      "avg_fare": 40.46748860257681,
       "airport_share": 1.0
     },
     {
-      "Zone": "Bedford",
-      "Borough": "Brooklyn",
-      "trips": 88,
-      "avg_fare": 19.083181818181817,
+      "Zone": "East Elmhurst",
+      "Borough": "Queens",
+      "trips": 1342,
+      "avg_fare": 39.50550670640835,
       "airport_share": 0.0
     },
     {
-      "Zone": "Elmhurst",
+      "Zone": "Cobble Hill",
+      "Borough": "Brooklyn",
+      "trips": 76,
+      "avg_fare": 26.50828947368421,
+      "airport_share": 0.0
+    },
+    {
+      "Zone": "Springfield Gardens South",
       "Borough": "Queens",
-      "trips": 75,
-      "avg_fare": 15.510533333333333,
+      "trips": 73,
+      "avg_fare": 50.86506849315069,
       "airport_share": 0.0
     }
   ],
   "dt_feature_importance": {
-    "trip_distance": 0.12662720953176806,
-    "duration_min": 0.15900820024820256,
-    "fare_amount": 0.1185528534766317,
-    "passenger_count": 0.06656177845722908,
-    "is_weekend": 0.04820033380605339,
-    "is_airport_pickup": 0.005054862564537978,
-    "is_airport_dropoff": 0.0022273515061761373,
-    "speed_mph": 0.4737674104094011
+    "trip_distance": 0.0737622637251226,
+    "duration_min": 0.24459812173040546,
+    "fare_amount": 0.07927866902734064,
+    "passenger_count": 0.013870348880988195,
+    "is_weekend": 0.07433244513462955,
+    "is_airport_pickup": 0.1065055288411215,
+    "is_airport_dropoff": 0.05742770265820385,
+    "speed_mph": 0.35022492000218824
   },
   "kmeans_elbow": {
-    "2": 476.07890490461523,
-    "3": 401.0461396700889,
-    "4": 296.1125314593145,
-    "5": 254.11067404141534,
-    "6": 275.45781339275646,
-    "7": 218.4497650366421,
-    "8": 264.7950014602583,
-    "9": 121.34648562137461
+    "2": 560.5767991910841,
+    "3": 390.8368727699865,
+    "4": 271.6002350257405,
+    "5": 226.11550165364883,
+    "6": 192.8768806388739,
+    "7": 160.63541710121527,
+    "8": 142.2257258371061,
+    "9": 130.61195597126834
+  },
+  "hypothesis_tests": {
+    "H1: Airport fares > non-airport": {
+      "t_statistic": 306.128,
+      "p_value": "0.00e+00",
+      "mean_airport": 49.08,
+      "mean_non_airport": 15.54,
+      "significant": true
+    },
+    "H2: Rush-hour duration > off-peak": {
+      "t_statistic": 17.625,
+      "p_value": "1.59e-69",
+      "mean_rush": 14.66,
+      "mean_off_peak": 13.96,
+      "significant": true
+    },
+    "H3: Weekend tip rate != weekday": {
+      "chi_square": 30.654,
+      "p_value": "3.08e-08",
+      "weekend_tip_rate": 0.7461,
+      "weekday_tip_rate": 0.7545,
+      "significant": true
+    }
+  },
+  "cross_validation": {
+    "simple_linear_cv_r2": "0.8916 \u00b1 0.0015",
+    "multi_var_cv_r2": "0.9238 \u00b1 0.0025",
+    "logistic_cv_auc": "0.5892 \u00b1 0.0027"
   }
 }

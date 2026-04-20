@@ -1,6 +1,6 @@
-model,r2,adj_r2,rmse,mae,equation,r2_log_space,r2_raw_space,rmse_raw_min,mae_raw_min,skewness_before_log,skewness_after_log,pseudo_r2_mcfadden,mean_count,dispersion,accuracy,precision,recall,f1,auc
-Simple Linear (fare~distance),0.6337,0.6337,3.3636,2.1421,fare = 5.265 + 4.172 * distance,,,,,,,,,,,,,,
-Multi-Variable Linear (fare),0.8668,0.8667,2.0288,0.8051,,,,,,,,,,,,,,,
-Log-Linear (log duration),,,,,,0.499,0.3923,5.0401,3.2918,2.4454,-0.3791,,,,,,,,
-Poisson (hourly trip counts),,,202.6698,106.056,,,,,,,,0.5508,116.0492,460.7423,,,,,
-Logistic (P(tip>0)),,,,,,,,,,,,,,,0.9477,0.9541,0.9787,0.9662,0.9324
+model,r2,adj_r2,rmse,mae,equation,cv_r2,r2_log_space,r2_raw_space,rmse_raw_min,mae_raw_min,skewness_before_log,skewness_after_log,pseudo_r2_mcfadden,mean_count,dispersion,overdispersion_note,accuracy,precision,recall,f1,auc,cv_auc
+Simple Linear (fare~distance),0.8929,0.8929,4.6067,2.6669,fare = 6.522 + 3.592 * distance,0.8916 ± 0.0015,,,,,,,,,,,,,,,,
+Multi-Variable Linear (fare),0.9247,0.9247,3.8631,1.6892,,0.9238 ± 0.0025,,,,,,,,,,,,,,,,
+Log-Linear (log duration),,,,,,,0.4681,0.2668,9.374,5.5287,3.0896,-0.0475,,,,,,,,,,
+Poisson (hourly trip counts),,,164.2935,84.6087,,,,,,,,,0.5888,103.021,407.3702,Dispersion ratio = 407.4 (Poisson assumes 1.0). Severe overdispersion — standard errors are underestimated. A Negative B,,,,,,
+Logistic (P(tip>0)),,,,,,,,,,,,,,,,,0.5699,0.7974,0.5739,0.6675,0.5906,0.5892 ± 0.0027

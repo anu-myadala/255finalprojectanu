@@ -10,6 +10,6 @@ step,rows
 8. pickup within Jan 2024,2926117
 9. 1 min <= duration <= 6 hr,2895273
 10. 1 <= passengers <= 6,2864634
-"11. IQR clip fare_amount [0.00, 38.35]",2580617
-"11. IQR clip trip_distance [0.00, 4.86]",2391813
-"12. stratified sample (n=400,000 by hour)",387998
+"11. pctl clip fare_amount [4.40, 71.60]",2824898
+"11. pctl clip trip_distance [0.00, 19.00]",2797016
+"12. stratified sample (n=400,000 by hour)",398169
